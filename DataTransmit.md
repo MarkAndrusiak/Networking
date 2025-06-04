@@ -40,5 +40,36 @@ Synchronous Optical Network (SONET) is a high-speed digital networking standard 
 providing for synchronous comms. The signaling rates for both SONET and ATM are identical, and measured in terms of OC <br>
 1) A multiplexer converts multiple signals into one multiplexed optical signal -> it is then sent over Fiber Optic cables.
 2) The re-generator boosts the strength, allowing it to transmit further.
-3) At the other end, the demultiplexer converts the multiplexed optical signal back into the individual signals.
+3) At the other end, the demultiplexer converts the multiplexed optical signal back into the individual signals. <br>
+Because of the bandwidth capacity of SONET, it is partnered with ATM where ATM is the underlying signal technology and SONET is the overlying comms standard. <br>
+Together, ATM and SONET provide for a high-bandwidth means of transferring a mix of info at near real-time. <br>
+
+## Satellite Comms
+Any object in an orbit is called a satellite. A satellite can be natural, like the moon, or artificial. <br>
+Comm satellites receive, amplify and transmit voice, music, television, telephone, and data signals from one point on Earth to another. <br.
+The area of earth a satellite signal strikes is called its "footprint" <br>
+Ground stations can only communicate with a satellite when within the satellite's footprint. <br>
+A satellite's orbital pattern, altitude and velocity determine its footprint <br>
+
+## Satellite Orbits
+There are five basic orbits for satellites:
+- Low Earth Orbit (LEO) - Most common and smallest footprint
+- Medium Earth Orbit (MEO) - Used for GPS & moderate footprint
+- Highly Elliptical Orbit (HEO) - Elongated orbit, oriented for high dwell time on a large specific footprint & require 2+ satellites for consistent coverage. <br>
+- Geosynchronous Orbit (GSO) - Second most common, 24 hour orbit designed to maintain a consistent footprint on the Earth, 22k mile altitude & used for comms and broadcasting <br>
+- Geostationary Orbit, or Geosynchronous Equatorial Orbit (GEO) - Specific type of GSO & Occupies a fixed location above the equator. <br>
+## VSAT
+Very Small Aperture Terminal (VSAT) - Networking services such as data, voice, video, and fax transmissions are delivered using geostationary satellites. <br>
+VSAT units can be integrated as one unit for portable applications and operate in two basic topologies: <br>
+- Mesh Topology -> Comms go from the VSAT to the satellite and then directly to the destination VSAT & require one satellite hop
+- Star Topology -> Satellite connection goes through a comm center or hub, then is transmitted to the destination & requires two satellite hops
+VSAT operates in 3 configs: <br>
+Point-point <br>
+- Comms occur between 2+ ground stations and uses mesh topology
+Point-multipoint <br>
+- One transmitter and multiple receivers, utilizes star topology since only one ground station (usually transmits) used for TV and Radio broadcasts.
+Multipoint-to-point: Multiple transmitters and one receiver acting as a hub. Star topology which tactical satellite architectures use. <br>
+
+
+
 
