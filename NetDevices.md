@@ -98,4 +98,62 @@ This allows for the following practices, among others: <br>
 - VLANs
 - Port management
 - Traffic Management
-Config tables are accessed via CLI, Serial Console Connection, Telnet/SSH
+Config tables are accessed via CLI, Serial Console Connection, Telnet/SSH, embedded management protocols, or a GUI (web browser interface) <br>
+## Routers
+Routers perform the traffic directing functions on the Internet, and also manage private networks (Businesses, Residential, Campuses, etc) <br>
+- Unlike switches, routers communicate with Ip addresses, instead of MAC addresses <br>
+Data sent between routers is in the form of data packets <br>
+They operate at level 3 of the OSI model <br>
+## Routers - Comms
+A router has two main functions: <br>
+- Route
+- Forward <br>
+Forwarding: <br>
+- Router will receive packets from the source, ensure the checksums are the same and the packets are complete, then check routing table for where to send <br>
+Routing: <br>
+- This is where the router chooses how to send the packet to the destination <br>
+Routers perform Address Learning on all traffic they process. <br>
+- This address learning consists of notating the IP of neighboring devices and storing this data in the router's "Routing Table" <br>
+Not only do routers note all of the traffic flowing through them for Address learning, but they share their Routing Table with their adjacent routers. <br>
+Similarly to Switches, Routers operate in Full Duplex (defining collision domains) and have ports referred to as 'interfaces'. <br>
+- Each of these interfaces connects to a separate network
+Each interfaces can broadcast traffic to the network they belong to, but when they receive broadcast traffic they do not forward out of their other interfaces <br>
+(connected to other networks) <br>
+- This is referred to as "defining" broadcast domains <br>
+## Routers Broadcast / Collision Domains
+![image](https://github.com/user-attachments/assets/ae2e5549-d33c-4fa1-a9f8-b3360398981f) <br>
+## Routers Default Gateway
+Within your network, you have an interface on your router called the Default Gateway:
+- A node that enables connection BETWEEN networks. <br>
+- referred to as the default due to it being the first route taken if the network is unsure where to send traffic based on the destination IP
+- Default gateways understand specific routes that must be taken to move traffic out of your network onto the next device that understands how to handle the traffic <br>
+- If traffic is meant to travel within your network, and the traffic is sent to the default gateway <br>
+(due to switches not knowing where the host is), the default gateway will forward the traffic to the correct local device that can send te traffic to the intended destination. <br>
+## Routers Network Address translation (NAT)
+Network Address Translation -> The process of translating your local, private address to a public address (the general internet) before transferring the info out of your network. <br>
+- One of the key functions of the router, outside of forwarding/routing
+- This separation of private and public network can allow:
+  - Conservation of IPv4 addresses
+  - Security of private IPs
+There are 3 main types of NAT:
+- Static NAT
+- Dynamic NAT
+- Port Address Translation (PAT)
+Static NAT -> Each individual public IP on your network has a specific Private IP / The private IP is statically assigned to the public IP. <br>
+Dynamic NAT -> there is a pool of IP addresses available to be leased to private IPs dynamically <br>
+The public IP you use will likely change <br>
+Port Address Translation (PAT) -> Uses a singular Public IP for all private hosts, but assigns a random high port to each piece of traffic <br>
+- This random high port acts as a label that is stored in a table, informing the router of which public device is tied to each port
+- Also referred to as "NAT overloading" <br>
+
+## OSI Model Revisit
+Study Aid:
+
+L4: Firewalls
+L3: Ipv4, IPv6, Routers, NAT
+L2: ARP, ATM, MAC, 802.11, 802.3, NIC, Switches
+L1: Topologies, Cables, DSL, Hub, Amplifier, Repeater
+
+ 
+
+
