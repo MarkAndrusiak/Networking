@@ -59,4 +59,43 @@ Hubs are also unable to filter data, and therefore operate with half-duplex comm
 Any nodes that are connected, and are subject to traffic collisions, are referred to as being in the same "Collision Domain" <br>
 - Since these nodes also receive any broadcast frames sent on the LAN, they are in the same "broadcast domain" as well <br>
 ## Switches
-
+Switches are able to connect various devices together (PCs, printers, routers, etc) via cabling. <br>
+- Switches allow these to communicate with a specific node connected to that switch (rather than broadcast)
+- Each device is connected to the switch via a Switch Port (most will have 4, 8, 12, 24, or 48 ports) <br>
+Switches are faster than hubs, and allow for full-duplex traffic, eliminating issues with collisions that are prevalent in hub based networks. <br>
+Traditional switches operate at layer 2 of the OSI model <br>
+- This is due to their ability to work with MAC addresses (layer 2), and forward traffic through LAN environments
+  - These MAC addresses are stored in MAC Address Tables (MATs) <br>
+## Switches - Address Learning
+Switches can identify the devices connected from MAC addresses, within the ethernet layer 2 frames being sent. <br>
+- A switch's ability to forward traffic, based on MAC addresses, relies on its ability to perform Address Learning
+Every port on a switch has its own MAC address. <br>
+- Switch ports, unlike a computer's ethernet port, run in "Promiscuous Mode"
+- Receive all frames it sees on the port
+As traffic flows through the switch port, the switch logs the source port in its MAC Address Table and maps that source MAC to the port it received the data from for future reference <br>
+Switches perform communication by copying incoming frames (from the data source) from one switch port and sending them out of another switch port (connected to the data destination) <br>
+While switches don't automatically send broadcast frames, they do have the capability to send them in order to learn what devices are connected to them
+- This means that they do not define broadcast domains
+However, switches run full duplex -> issues with collisions are eliminated over ethernet networks (prevalent in hub networks) <br>
+- Referred to as a switch's capability to "define collision domains" <br>
+Switches are available in many forms, which all vary in size, the number of nodes that it can support, and their general purpose.
+The two types of switches discussed are:
+**Purpose**: <br>
+- Stand-Alone Switch -> Typically intended for a home or office room next to your desktop
+- Rack mounted Switch -> Switches that manage multiple office's devices <br>
+**Configuration Type**:
+- Managed
+- Unmanaged <br>
+## Switches Config Types
+Unmanaged Switches<br>
+- Hold no configuration interface or options
+- Often used in a small office/home office environment
+- Referred to as plug and play as they aren't configured for a specific environment <br>
+Managed switches <br>
+- These have a config table, giving you a way to modify the way it functions<br>
+This allows for the following practices, among others: <br>
+- Duplexing
+- VLANs
+- Port management
+- Traffic Management
+Config tables are accessed via CLI, Serial Console Connection, Telnet/SSH
