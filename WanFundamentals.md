@@ -56,3 +56,7 @@ Packet Switching <br>
 - Defragmentation occurs at the destination (the layer 3 header for each packet has a sequence number, which makes sure all packets arrive in the correct order) <br>
 ## WAN Protocols
 Wans are data comm networks that cover a relatively broad geographic area
+- Also use transmission facilities typically managed by ISPs or by Subscription based services
+WAN protocols are protocols and technologies that determine the efficiency of the performance of your WAN
+- Most WAN protocols are layer 2, but generally WAN protocols heavily interact with layers 1-3
+
